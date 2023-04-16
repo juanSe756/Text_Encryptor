@@ -4,14 +4,14 @@ function encrypt() {
   if (text.length != 0) {
     untoggle();
     toggle();
-    console.log('entréxd');
+    console.log("entréxd");
     document.getElementById("msg-result").innerHTML = text
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
       .replace(/a/gi, "ai")
       .replace(/o/gi, "ober")
       .replace(/u/gi, "ufat");
-      document.getElementById("text1").value = "";
+    document.getElementById("text1").value = "";
   } else {
     untoggle();
     alert("Please enter a text");
@@ -28,7 +28,7 @@ function decrypt() {
       .replace(/ai/gi, "a")
       .replace(/ober/gi, "o")
       .replace(/ufat/gi, "u");
-      document.getElementById("text1").value = "";
+    document.getElementById("text1").value = "";
   } else {
     untoggle();
     alert("Please enter a text");
@@ -71,6 +71,5 @@ function copy() {
     .catch((err) => {
       console.error("Error al copiar el texto: ", err);
     });
-    document.querySelector("textarea").focus();
-
+  document.querySelector("textarea").focus();
 }
