@@ -4,7 +4,6 @@ function encrypt() {
   if (text.length != 0) {
     untoggle();
     toggle();
-    console.log("entréxd");
     document.getElementById("msg-result").innerHTML = text
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
@@ -21,6 +20,7 @@ function encrypt() {
 function decrypt() {
   var text = document.getElementById("text1").value.toLowerCase();
   if (text.length != 0) {
+    untoggle();
     toggle();
     document.getElementById("msg-result").innerHTML = text
       .replace(/enter/gi, "e")
@@ -40,19 +40,16 @@ function toggle() {
   var text = document.getElementById("msg-result");
   var info = document.getElementById("encrypted-msg");
   var copy = document.getElementById("copy-space");
-  if (img.style.visibility === "visible") {
-    img.style.visibility = "hidden";
-    info.style.visibility = "hidden";
-    text.style.visibility = "visible";
-    copy.style.visibility = "visible";
-  }
+  img.style.visibility = "hidden";
+  info.style.visibility = "hidden";
+  text.style.visibility = "visible";
+  copy.style.visibility = "visible";
 }
 function untoggle() {
   var img = document.getElementById("person");
   var info = document.getElementById("encrypted-msg");
   var text = document.getElementById("msg-result");
   var copy = document.getElementById("copy-space");
-
   img.style.visibility = "visible";
   info.style.visibility = "visible";
   text.style.visibility = "hidden";
